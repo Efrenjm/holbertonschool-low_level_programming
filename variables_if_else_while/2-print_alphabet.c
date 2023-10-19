@@ -11,9 +11,10 @@ int main(void)
 {
 	int i;
 
-	for (i = 61; i < 123; i++)
+	for (i = 97; i < 123; i++)
 	{
-		putchar(i);
+		putc(i,stdout);
 	}
+	putc(10,stdout);
 	return (0);
 }
