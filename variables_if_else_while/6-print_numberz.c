@@ -12,7 +12,7 @@ int main(void)
 	int i;
 
 	for (i = 48; i < 58; i++)
-		putc(i, stdout);
+		putchar(i);
 	printf("\n");
 	return (0);
 }
