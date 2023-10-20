@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+/* more headers goes there */
+/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int i;
+
+	for (i = 97; i < 123; i++)
+		putc(i, stdout);
+	for (i = 65; i < 91; i++)
+		putc(i, stdout);
+	putc(10, stdout);
+	return (0);
+}
