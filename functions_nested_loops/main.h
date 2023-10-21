@@ -24,9 +24,7 @@ int print_alphabet(void)
         int i;
 
         for (i = 97; i < 123; i++)
-        {
                 putc(i, stdout);
-        }
         putc(10, stdout);
         return (0);
 }
