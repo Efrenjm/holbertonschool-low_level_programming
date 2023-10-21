@@ -8,7 +8,7 @@
  *
  * Return: Always 0 (Success)
  */
-int _putchar(void)
+int putch(void)
 {
 	printf("_putchar\n");
 	return (0);
