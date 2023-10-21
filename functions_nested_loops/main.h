@@ -9,7 +9,7 @@
  *
  * Return: Always 0 (Success)
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
         int i;
 
@@ -18,5 +18,4 @@ int print_alphabet(void)
                 putc(i, stdout);
         }
         putc(10, stdout);
-        return (0);
 }
