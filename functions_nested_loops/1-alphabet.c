@@ -1,14 +1,16 @@
 #include "main.h"
-/* more headers goes there */
-/* betty style doc for function main goes there */
-
 /**
- * print_alphabet - prints the alphabet in order
- *
- * Return: Always 0 (Success)
+ * print_alphabet - prints alphabet
+ * main - funcion principal
+ * Return: 0
  */
-int main(void)
+void print_alphabet(void)
 {
-        print_alphabet();
-        return (0);
+	int i;
+	
+	for (i = 97; i <= 122; i++)
+	{
+		_putchar(i);
+	}
+	_putchar("\n");
 }

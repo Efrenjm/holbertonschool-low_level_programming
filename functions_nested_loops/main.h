@@ -1,21 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef MAIN_H_
+#define MAIN_H_
 
-/* more headers goes there */
-/* betty style doc for function main goes there */
+int _putchar(char c);
+void print_alphabet(void);
+void print_alphabet_x10(void);
 
-/**
- * print_alphabet - prints the alphabet in order
- *
- * Return: Always 0 (Success)
- */
-void print_alphabet(void)
-{
-        int i;
-
-        for (i = 97; i < 123; i++)
-        {
-                putc(i, stdout);
-        }
-        putc(10, stdout);
-}
+#endif
