@@ -4,7 +4,7 @@
 /**
  * swap_int - swap the values of two integers
  * @a: first int
- * @b; second int 
+ * @b: second int
  * Return: Always 0.
  */
 int swap_int(int *a, int *b)
