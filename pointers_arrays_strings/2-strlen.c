@@ -2,7 +2,7 @@
 #include <string.h>
 /**
  * _strlen - swap the values of two integers
- * @s: string that will be counted 
+ * @s: string that will be counted
  * Return: Always 0.
  */
 int _strlen(char *s)
