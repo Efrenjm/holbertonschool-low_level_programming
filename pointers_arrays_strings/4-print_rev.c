@@ -3,10 +3,10 @@
  * print_rev - reverse a string
  * @s: string to be reversed
  */
-void print_rev(char *s) 
+void print_rev(char *s)
 {
-	int i = 0; 
-	
+	int i = 0;
+
 	while (s[i] != '\0')
 		i++;
 	i--;
@@ -16,4 +16,4 @@ void print_rev(char *s)
 		i--;
 	}
 	_putchar('\n');
-} 
+}
