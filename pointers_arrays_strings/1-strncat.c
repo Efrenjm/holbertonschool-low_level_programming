@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * *_strcat - concatenate two strings
+ * *_strncat - concatenate n bytes of a string to another string
  * @dest: first string
- * @src: second string
- * @n: number of bytes from second string 
+ * @src: second n-byte sub-string
+ * @n: number of bytes from second string
  * Return: dest.
  */
 char *_strncat(char *dest, char *src, int n)
@@ -13,9 +13,9 @@ char *_strncat(char *dest, char *src, int n)
 	char *temp = dest;
 	int i = 0;
 
-	while(*temp != '\0')
+	while (*temp != '\0')
 		temp++;
-	while(*src != '\0' && i<n)
+	while (*src != '\0' && i < n)
 	{
 		*temp = *src;
 		temp++;
