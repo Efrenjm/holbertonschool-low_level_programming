@@ -3,13 +3,12 @@
 #include "main.h"
 
 /**
- * is_palindrome_recursive - recursive function to check if the string is a palindrome
+ * is_palindrome_recursive - recursive palindrome function
  * @s: number to be tested
  * @start: start position
  * @end: ending position
- * Return: 
+ * Return: 1 if palindrome, 0 if not palindrome
  */
-
 int is_palindrome_recursive(char *s, int start, int end)
 {
 	if (start >= end)
@@ -22,11 +21,11 @@ int is_palindrome_recursive(char *s, int start, int end)
 /**
  * is_palindrome - checks if a string is a palindrome
  * @s: string to verify
- * Return: 1 if it is prime or 0 if it is not.
+ * Return: 1 if it is palindrome or 0 if it is not.
  */
 int is_palindrome(char *s)
 {
-	int length; 
+	int length;
 
 	length = strlen(s);
 	if (length <= 1)
