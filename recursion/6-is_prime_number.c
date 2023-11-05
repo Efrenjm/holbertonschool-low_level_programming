@@ -1,16 +1,31 @@
 #include "main.h"
 
 /**
- * _puts_recursion - writes a string with recursion
- * @s: string
+ * is_prime_recursive - recursive function to check if the number is prime
+ * @n: number to be tested
+ * @divisor: divisor to test
  * Return: always 0.
  */
-void _puts_recursion(char *s)
+
+int is_prime_recursive(int n, int divisor)
 {
-	if (*s == '\0') {
-        	_putchar('\n');
-        	return;
-    	}
-    _putchar(*s);
-    _puts_recursion(s + 1);
+	if (n <= 1)
+		return 0;
+	if (divisor == 1)
+		return 1;
+	if (n % divisor == 0)
+		return 0;
+	return is_prime_recursive(n, divisor - 1);
+}
+
+/**
+ * is_prime_number - recursive function to check if the number is prime
+ * @n: number to be tested
+ * Return: always 0.
+ */
+int is_prime_number(int n)
+{
+	if (n <= 1)
+		return 0;
+	return is_prime_recursive(n, n - 1);
 }
