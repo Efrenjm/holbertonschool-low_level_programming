@@ -1,11 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * main - Function to count how many coins will be
+ * @argc: number of parameters
+ * @argv: array of parameters
+ * Return: 0 if works correctly, 1 if it gets an error.
+ */
 
 int main(int argc, char *argv[])
 {
 	int cents, numCoins, i;
 	int coins[] = {25, 10, 5, 2, 1};
-	
+
 	if (argc != 2)
 	{
 		printf("Error\n");
