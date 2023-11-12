@@ -12,7 +12,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	size_t s1_len, s2_len;
 	char *concat;
-	
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
@@ -26,7 +26,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	concat = malloc(s1_len + n + 1);
 
-	if (concat != NULL) {
+	if (concat != NULL)
+	{
 		strcpy(concat, s1);
 		strncat(concat, s2, n);
 	}
