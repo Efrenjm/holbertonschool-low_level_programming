@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * array_range - create an array of integers
- * @min: lower limit value 
+ * @min: lower limit value
  * @max: upper limit value
  *
  * Return: Pointer to array
@@ -16,11 +16,11 @@ int *array_range(int min, int max)
 
 	result = malloc((max - min + 1) * sizeof(int));
 
-	if (result != NULL) 
+	if (result != NULL)
 	{
 		for (i = 0; min <= max; i++, min++)
 			result[i] = min;
-    	}
+	}
 
-	return result;
+	return (result);
 }
