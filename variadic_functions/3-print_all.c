@@ -55,9 +55,8 @@ void print_all(const char * const format, ...)
 		}*/
 		separator = ", ";
 		current_format++;
-		if (*current_format == '\0')
-			printf("\n");
 	}
+	printf("\n");
 
 	va_end(args);
 }
