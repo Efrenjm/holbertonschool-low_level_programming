@@ -38,8 +38,6 @@ void print_all(const char * const format, ...)
 				printf("%s%s", separator, str);
 				separator = ", ";
 				break;
-			default:
-				separator = "";
 		}
 		current_format++;
 	}
