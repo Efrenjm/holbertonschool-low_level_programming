@@ -5,10 +5,6 @@
  * @format: format of the variable
  * Return: nothing
  */
-/*void print_one(const char *current_format)
-{
-	printf("%s%c", separator, va_arg(args, int));
-}*/
 void print_all(const char * const format, ...)
 {
 	va_list args;
@@ -25,35 +21,26 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%s%c", separator, va_arg(args, int));
+				separator = ", ";
 				break;
 			case 'i':
 				printf("%s%d", separator, va_arg(args, int));
+				separator = ", ";
 				break;
 			case 'f':
 				printf("%s%f", separator, va_arg(args, double));
+				separator = ", ";
 				break;
 			case 's':
 				str = va_arg(args, char *);
 				if (str == NULL)
-                                	str = "(nil)";
-                        	printf("%s%s", separator, str);
-				break;
-		}
-		/*if (*current_format == 'c')
-			printf("%s%c", separator, va_arg(args, int));
-		else if (*current_format == 'i')
-			printf("%s%d", separator, va_arg(args, int));
-		else if (*current_format == 'f')
-			printf("%s%f", separator, va_arg(args, double));
-		else if (*current_format == 's')
-		{
-			str = va_arg(args, char * );
-			if (str == NULL)
-				printf("%s(nil)", separator);
-			else
+					str = "(nil)";
 				printf("%s%s", separator, str);
-		}*/
-		separator = ", ";
+				separator = ", ";
+				break;
+			default:
+				separator = "";
+		}
 		current_format++;
 	}
 	printf("\n");
