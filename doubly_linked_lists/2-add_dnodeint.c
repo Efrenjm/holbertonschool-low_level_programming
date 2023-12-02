@@ -3,31 +3,26 @@
 #include <string.h>
 #include "lists.h"
 /**
- * add_node - add a new node at the beginning of the list
+ * add_dnodeint - add a new node at the beginning of the list
  * @head: head of the list
- * @str: new value
- * Return: the address of the new element or NULL if faild
+ * @n: node int value
+ * Return: the address of the new element or NULL if failed
  */
-list_t *add_node(list_t **head, const char *str)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	list_t *new_node;
+	dlistint_t *new_node;
 
-	if (str == NULL)
-		return (NULL);
-
-	new_node = malloc(sizeof(list_t));
+	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
 		return (NULL);
 
-	new_node->str = strdup(str);
-	if (new_node->str == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
-	new_node->len = strlen(str);
+	new_node->n = n;
 	new_node->next = *head;
+	new_node->prev = NULL;
+	if (*head != NULL)
+	{
+		(*head)->prev = new_node;
+	}
 	*head = new_node;
 
 	return (new_node);
