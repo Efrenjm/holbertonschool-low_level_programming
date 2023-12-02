@@ -3,13 +3,13 @@
 #include <string.h>
 #include "lists.h"
 /**
- * free_list - frees a list_t
+ * free_dlistint - frees a list_t
  * @head: head of the list
  * Return: none
  */
-void free_list(list_t *head)
+void free_dlistint(dlistint_t *head)
 {
-	list_t *temp;
+	dlistint_t *temp;
 
 	if (head != NULL)
 	{
@@ -17,10 +17,8 @@ void free_list(list_t *head)
 		{
 			temp = head;
 			head = head->next;
-			free(temp->str);
 			free(temp);
 		}
-		free(head->str);
 		free(head);
 	}
 }
