@@ -4,7 +4,7 @@
 #include "lists.h"
 /**
  * delete_dnodeint_at_index - delete node at index
- * @h: head of the list
+ * @head: head of the list
  * @index: index where to insert
  * Return: none
  */
@@ -29,7 +29,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		current->prev->next = current->next;
 	else
 		*head = current->next;
-	
+
 	if (current->next != NULL)
 		current->next->prev = current->prev;
 	free(current);
