@@ -3,22 +3,36 @@
 #include <string.h>
 #include "lists.h"
 /**
- * free_dlistint - frees a list_t
- * @head: head of the list
+ * delete_dnodeint_at_index - delete node at index
+ * @h: head of the list
+ * @index: index where to insert
  * Return: none
  */
-void free_dlistint(dlistint_t *head)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp;
+	dlistint_t *current;
+	unsigned int count;
 
-	if (head != NULL)
+	if (head == NULL || *head == NULL)
+		return (-1);
+	current = *head;
+	for (count = 0; count < index; count++)
 	{
-		while (head->next != NULL)
-		{
-			temp = head;
-			head = head->next;
-			free(temp);
-		}
-		free(head);
+		if (current == NULL)
+			return (-1);
+		current = current->next;
 	}
+	if (current == NULL)
+		return (-1);
+
+	if (current->prev != NULL)
+		current->prev->next = current->next;
+	else
+		*head = current->next;
+	
+	if (current->next != NULL)
+		current->next->prev = current->prev;
+	free(current);
+
+	return (1);
 }
