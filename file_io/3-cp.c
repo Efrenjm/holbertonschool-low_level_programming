@@ -16,7 +16,7 @@ void print_error_and_exit(int code, const char *message, ...)
 	va_list args;
 
 	va_start(args, message);
-	dprintf(STDERR_FILENO, message, args);
+	vfprintf(stderr, message, args);
 	va_end(args);
 	exit(code);
 }
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		fprintf(stderr, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fd_from = open_file(file_from, O_RDONLY, 0);
