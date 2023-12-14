@@ -50,7 +50,7 @@ void copy_file(const char *file_from, const char *file_to)
 	{
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written == -1)
-			print_error_and_exit(99, "Can't write to file %s\n", file_to);
+			print_error_and_exit(99, "Can't write to %s\n", file_to);
 	}
 	if (bytes_read == -1)
 		print_error_and_exit(98, "Can't read from file %s\n", file_from);
@@ -61,8 +61,9 @@ void copy_file(const char *file_from, const char *file_to)
 }
 /**
  * main - main function
- * @argc_from: argc
+ * @argc: argc
  * @argv: argv
+ * Return: 0 if succes else, error code
  */
 int main(int argc, char *argv[])
 {
