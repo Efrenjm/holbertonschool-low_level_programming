@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "hash_tables.h"
 /**
- * hash_dbj2 - hash function
+ * hash_djb2 - hash function
  * @str: key
  * Return: hash
  */
